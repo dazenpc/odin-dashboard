@@ -30,7 +30,7 @@ body{
     padding-top: 10px;
 }
 
-.logo img, .menu-links img, .page-links img, .main-content-header img{
+.logo img, .menu-links img, .page-links img, .main-content-header img {
     object-fit: contain;
     width: 50px;
     height: 50px;
@@ -201,4 +201,78 @@ body{
         color: orange;
         box-shadow: 3px 1px 10px blue;;
     }
+}
+
+.main-content-main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.projects{
+    background-color: rgb(235, 234, 234);
+    padding-left: 65px;
+    padding-right: 65px;
+    & img{
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+    }
+
+    div{
+        background-color: white;
+        height: 180px;
+        width: 480px;
+        border: 1px solid whitesmoke;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 2px 3px 8px gray;
+        border-left: 10px solid rgb(59, 59, 204);
+        position: relative;
+
+        & img{
+            position: absolute;
+            bottom: 20px;
+        }
+
+        & img:hover{
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        & img[src$="star.png"]{
+            right: 80px;
+        }
+
+        & img[src$="eye.png"]{
+            right: 120px;
+        }
+
+        & img[src$="share.png"]{
+            right: 40px;
+        }
+    }
+
+    & div:hover{
+        box-shadow: 2px 4px 20px gray;
+        background-color: rgb(102, 102, 253);
+        color: white;   
+    }
+
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 60px repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.heading-text{
+    justify-self: start;
+    grid-column: 1 / -1;
+
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: -10px;
 }
