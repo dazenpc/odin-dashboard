@@ -276,3 +276,78 @@ body{
     font-weight: bold;
     margin-bottom: -10px;
 }
+
+.main-sidebar-right{
+    grid-column: 2;
+
+    background-color: rgb(179, 179, 179);
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.announcements{
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.a-content{
+    display: flex;
+    flex-direction: column;
+
+    
+    border: 2px solid gray;
+    padding: 10px 30px;
+    
+    background-color: whitesmoke;
+    border-radius: 25px;
+}
+
+.announcements > p{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.a-content > div{
+    padding: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+
+    /* Experimental to get the overflow effect */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.a-content > div:hover{
+    border: 1px solid gray;
+    box-shadow: 1px 3px 5px black;
+    border-radius: 25px;
+    background-color: rgb(142, 142, 248);
+    color: white;
+
+    & p:first-child{
+        color: orange;
+    }
+}
+
+.a-content > div p{
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.a-content > div p:first-child{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.trending-content{
+    height: 100px;
+}
